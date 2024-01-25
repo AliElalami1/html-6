@@ -1,0 +1,353 @@
+<html>
+<head>
+    <title>Triple Number Tracker</title>
+    <style>
+       body {
+        align-content: center;
+        background-color: #680000;
+        color: white;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display:grid;
+ 
+        text-align: center;
+         font-size: 60px;
+ 
+         grid-template-columns: 1fr 1fr 1fr;
+         grid-template-rows: 100px 100px 1fr 1fr 1fr 1fr 100px;
+         gap: 10px;
+ 
+         height: 99vh;
+         width: 99vw;
+ 
+       }
+        div {
+         align-content: center;
+         border: 3px solid black;
+         vertical-align:middle;
+         }
+ 
+         button {
+           width: 95%;
+           height: 95%;
+ 
+    
+         }
+ 
+         .displayButton {
+            background-color: #888888;
+ 
+         }
+ 
+       .title {
+          grid-row-start: 1;
+          grid-row-end: 2;
+          grid-column-start: 1;
+          grid-column-end: 4;
+          background: #dd0000;
+           border: #ffffff solid 4px; 
+                   
+            font-size: 50px;
+          }
+ 
+        .informationDisplay {
+            grid-row-start: 2;
+          grid-row-end: 3;
+          grid-column-start: 1;
+          grid-column-end: 4;
+          background: #000000;
+           border:#dd0000 solid 4px; 
+           vertical-align: center;
+            font-size: 25px;
+        }
+ 
+      .button1 {
+          grid-row-start: 3;
+          grid-row-end: 4;
+          grid-column-start: 1;
+          grid-column-end: 2;
+          }
+ 
+      .button2 {
+          grid-row-start: 4;
+          grid-row-end: 5;
+          grid-column-start: 1;
+          grid-column-end: 2;
+          }
+ 
+ 
+          .button3 {
+          grid-row-start: 5;
+          grid-row-end: 6;
+          grid-column-start: 1;
+          grid-column-end: 2;
+          }
+ 
+          .button4 {
+          grid-row-start: 6;
+          grid-row-end: 7;
+          grid-column-start: 1;
+          grid-column-end: 2;
+          }
+          
+         .button5 {
+          grid-row-start: 3;
+          grid-row-end: 4;
+          grid-column-start: 2;
+          grid-column-end: 3;
+          }
+ 
+          .button6 {
+          grid-row-start: 4;
+          grid-row-end: 5;
+          grid-column-start: 2;
+          grid-column-end: 3;
+          }
+ 
+          .button7 {
+          grid-row-start: 5;
+          grid-row-end: 6;
+          grid-column-start: 2;
+          grid-column-end: 3;
+          }
+ 
+          .button8 {
+          grid-row-start: 6;
+          grid-row-end: 7;
+          grid-column-start: 2;
+          grid-column-end: 3;
+          color: red;
+          }
+          
+          .button9 {
+          grid-row-start: 3;
+          grid-row-end: 4;
+          grid-column-start: 3;
+          grid-column-end: 4;
+          }
+ 
+          
+          .button10 {
+          grid-row-start: 4;
+          grid-row-end: 5;
+          grid-column-start: 3;
+          grid-column-end: 4;
+          }
+ 
+          
+          .button11 {
+          grid-row-start: 5;
+          grid-row-end: 6;
+          grid-column-start: 3;
+          grid-column-end: 4;
+          }
+      
+          .button12 {
+          grid-row-start: 6;
+          grid-row-end: 7;
+          grid-column-start: 3;
+          grid-column-end: 4;
+          
+          }
+      
+      
+          .footer {
+          grid-row-start: 7;
+          grid-row-end: 8;
+          grid-column-start: 1;
+          grid-column-end: 4;
+          background: #dd0000;
+          }
+   
+   h1 {
+    font-size: 50px;
+ 
+   }
+ 
+  input {
+    font-size: 20px;
+   }
+ 
+    </style>
+ 
+    <script>
+     var numberCount= 0;
+     var a = 0;
+     var b = 0;
+     var c = 0;
+     var numClicks = 0;
+     var message = "The value of a is " + a;
+     var message2 = "The value of b is " + b;
+     var message3 = "The value of c is " + c;
+     var reset = 0;
+     b = 0;
+    
+function myFirstFunction() {
+            a++;
+            document.getElementById("showHere").innerHTML = a; }
+
+function mySecondFunction() {
+            a = a + 10;
+document.getElementById("showHere").innerHTML = a; 
+}
+ 
+function myThirdFunction() {
+        b++;
+document.getElementById("showHere").innerHTML = b;
+}
+ 
+    function myFourthFunction() {
+        b++;
+        b = b + 10;
+        document.getElementById("showHere").innerHTML = b;
+    }
+ 
+    function myFifthFunction() {
+        c++;
+        document.getElementById("showHere").innerHTML = c;
+    }
+ 
+    function mySixthFunction() {
+        c++;
+        c = c + 10;
+        document.getElementById("showHere").innerHTML = c;
+    }
+ 
+     
+     function showClicks() {
+        numClicks++;
+        message = "The value of a is " + a;
+        document.getElementById("showHere").innerHTML = message;
+ 
+     }
+ 
+     function showBClicks() {
+        numClicks++;
+        message2 = "The value of b is " + b;
+        document.getElementById("showHere").innerHTML = message2;
+     }
+ 
+     function showCClicks() {
+        numClicks++;
+        message3 = "The value of c is " + c;
+        document.getElementById("showHere").innerHTML = message3;
+ 
+     }
+ 
+     function consoleReset() {
+        document.getElementById("showHere").innerHTML = reset;
+ 
+     }
+ 
+ 
+    </script>
+</head>
+ 
+<body>
+    <div class="title">
+         TRIPLE NUMBER TRACKER
+ 
+       
+    </div>
+ 
+ 
+ 
+    <div class="informationDisplay" id = "showHere">
+     Use the buttons below to activate the tracker!  
+    
+   </div>	
+ 
+    <div class="button1"  onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
+       <button class="displayButton" onclick = "showClicks()">
+Display Value of A
+ 
+       </button> 
+    </div>
+ 
+    <div class="button2"  onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
+        <button onclick = "myFirstFunction()" id ="showHere">
+Add 1 to A
+ 
+        </button>
+    </div>
+ 
+    <div class="button3"  onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
+        <button onclick = "mySecondFunction()">
+Add 10 to A
+ 
+        </button>
+ 
+ 
+    </div>
+ 
+    <div class="button4" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
+        <button>
+0
+ 
+        </button>
+ 
+    </div>
+   
+    
+    <div class="button5" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
+        <button class="displayButton" onclick = "showBClicks()">
+Display value of B
+ 
+        </button>
+ 
+    </div>
+    <div class="button6" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
+        <button onclick = "myThirdFunction()">
+Add 1 to B
+ 
+        </button>
+ 
+    </div>
+    <div class="button7" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
+        <button onclick = "myFourthFunction()">
+Add 10 to B
+ 
+        </button>
+ 
+    </div>
+    <div class="button8" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
+        <button onclick = "consoleReset()">
+Reset All Values
+ 
+        </button>
+ 
+    </div>
+    <div class="button9" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
+        <button  class="displayButton" onclick = "showCClicks()">
+Display value of C
+ 
+        </button>
+ 
+    </div>
+ 
+    <div class="button10" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
+        <button onclick = "myFifthFunction()">
+Add 1 to C
+        </button>
+ 
+    </div>
+    <div class="button11" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
+        <button onclick = "mySixthFunction()">
+Add 10 to C
+        </button>
+ 
+    </div>
+    <div class="button12" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
+        <button>
+0
+        </button>
+ 
+    </div>
+ 
+    <div class="footer">
+        <input>comments
+    </div>
+  
+</body>
+ 
+ 
+</html>
